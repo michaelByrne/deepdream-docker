@@ -37,7 +37,7 @@ print "Processing file: " + input_file
 
 img = np.float32(PIL.Image.open('/data/%s' % input_file))
 print os.getcwd()
-model_path = '/caffe/models/MYNET/' # substitute your path here
+model_path = 'totalnoise/caffe/models/MYNET/' # substitute your path here
 net_fn   = model_path + 'deploy.prototxt'
 param_fn = model_path + 'MYNET_iter_55000.caffemodel'
 

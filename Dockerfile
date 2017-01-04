@@ -34,6 +34,7 @@ VOLUME ["/data"]
 
 
 WORKDIR /
+RUN ls
 ADD deepdream.py /deepdream.py
 
 CMD ["python", "-u", "deepdream.py"]

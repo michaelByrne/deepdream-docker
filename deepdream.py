@@ -37,9 +37,9 @@ print "Processing file: " + input_file
 
 img = np.float32(PIL.Image.open('/data/%s' % input_file))
 
-model_path = '/caffe/models/bvlc_googlenet/' # substitute your path here
+model_path = '/caffe/models/MYNET/' # substitute your path here
 net_fn   = model_path + 'deploy.prototxt'
-param_fn = model_path + 'bvlc_googlenet.caffemodel'
+param_fn = model_path + 'MYNET_iter_55000.caffemodel'
 
 # Patching model to be able to compute gradients.
 # Note that you can also manually add "force_backward: true" line to "deploy.prototxt".
@@ -118,8 +118,8 @@ def verifyModel(net, model):
             print k
         return False
 
-if not verifyModel(net, model_name):
-    os._exit(1)
+#if not verifyModel(net, model_name):
+#    os._exit(1)
 
 if not os.path.exists("/data/output"):
   os.mkdir("/data/output")

@@ -36,7 +36,7 @@ VOLUME ["/data"]
 WORKDIR /
 RUN ls
 RUN mkdir /caffe/models/MYNET
-COPY /ubuntu/caffe/models/MYNET /caffe/models/MYNET
+COPY /home/ubuntu/caffe/models/MYNET /caffe/models/MYNET
 ADD deepdream.py /deepdream.py
 
 CMD ["python", "-u", "deepdream.py"]

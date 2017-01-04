@@ -12,7 +12,7 @@ RUN apt-get install -y python python-dev python-pip python-numpy python-scipy
 
 # Caffe
 RUN git clone https://github.com/BVLC/caffe.git /caffe
-WORKDIR /caffe
+WORKDIR /home/ubuntu/caffe
 RUN cp Makefile.config.example Makefile.config
 RUN easy_install --upgrade pip
 
